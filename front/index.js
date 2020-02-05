@@ -51,6 +51,7 @@ const taskSection = (tasks) => {
     return (
         `<div>
             <h1>${tasks.title}</h1>
+            <p>${tasks.instruction}</p>
             <button onclick='edit("${tasks._id}")'>Edit</button>
             <button onclick='deleteElement("${tasks._id}")'>Delete</button>
             <hr>
