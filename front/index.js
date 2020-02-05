@@ -9,7 +9,7 @@ const addData = () => {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data), 
+        body: JSON.stringify(data),
     })
         .then((response) => location.reload())
         .catch((error) => {
@@ -111,13 +111,13 @@ const putData = () => {
 const deleteElement = async (id) => {
     console.log(id)
     await fetch('http://localhost:3333/tasks/delete/' + id, {
-        method: 'DELETE', 
+        method: 'DELETE',
         mode: 'cors',
         headers: {
-          'Content-Type': 'application/json'
+            'Content-Type': 'application/json'
         },
-      });
-      location.reload()
+    });
+    location.reload()
 }
 
 //function render main div 

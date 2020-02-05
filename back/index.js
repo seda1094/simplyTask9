@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
-const mongoose = require("mongoose") 
+const mongoose = require("mongoose")
 const Task = require("./models/task")
 var cors = require('cors')
 
@@ -15,7 +15,7 @@ app.get("/tasks", async (req, res) => {
     try {
         const tasks = await Task.find()
         res.status(200).send(tasks);
-        
+
     } catch (e) {
         console.log(e)
     }
@@ -23,7 +23,7 @@ app.get("/tasks", async (req, res) => {
 
 app.post("/tasks/add", async (req, res) => {
     console.log(req.body);
-        const task = Task({
+    const task = Task({
         title: req.body.title,
         instruction: req.body.instruction,
     })
