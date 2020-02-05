@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body> 
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        html,body, #root, .main{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .main{
+            display: flex;
+            justify-content: space-around;
+            align-items: center
+        }
+
+        .main .tasks,form{
+            width: calc(100%/3);
+            height: 70%;
+            border: 5px dashed black;
+            padding: 30px;
+            margin: 10px;
+        }
+
+        .main .tasks{
+            overflow-y: auto;
+        }
+        
+        input{
+            width: 80%;
+            height: 60px;
+            font-size: x-large;
+            margin:10px;
+            background: rgb(203, 196, 196)
+        }
+    </style>
+    <div id="root"></div>
+    <script src="index.js"></script>
+</body>
+</html>
